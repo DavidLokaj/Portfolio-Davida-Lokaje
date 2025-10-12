@@ -1,85 +1,27 @@
-import React, { useState } from "react";
-
-const tasks = [
-  {
-    name: "Task 1",
-    description: "In Task 1, I learned the basics of web development, including HTML structure and simple styling.",
-  },
-  {
-    name: "Task 2",
-    description: "Task 2 involved creating interactive elements using JavaScript, making the website more dynamic.",
-  },
-  {
-    name: "Task 3",
-    description: "During Task 3, I explored responsive design to ensure my portfolio looks great on any device.",
-  },
-  {
-    name: "Task 4",
-    description: "In Task 4, I focused on accessibility and making my site usable for everyone.",
-  },
-  {
-    name: "Task 5",
-    description: "Task 5 was about deploying the final project online and sharing it with others.",
-  },
-];
-
-export default function PortfolioPage() {
-  const [openTask, setOpenTask] = useState(null);
-
-  return (
-    <div style={{maxWidth: 800, margin: "0 auto", fontFamily: "sans-serif"}}>
-      <h1>David Lokaj Portfolio</h1>
-
-      <section>
-        <h2>Introduction</h2>
-        <p>
-          Welcome to my portfolio! Here you will find an overview of my work, my journey in web development, and details about my final project.
-        </p>
-      </section>
-
-      <section>
-        <h2>About Me</h2>
-        <p>
-          My name is David Lokaj, and I am passionate about creating engaging and accessible web experiences. This portfolio showcases my progress and achievements.
-        </p>
-      </section>
-
-      <section>
-        <h2>Tasks</h2>
-        <div>
-          {tasks.map((task, idx) => (
-            <div key={task.name} style={{marginBottom: 10, border: "1px solid #ccc", borderRadius: 6}}>
-              <button
-                style={{
-                  background: "#f5f5f5",
-                  border: "none",
-                  width: "100%",
-                  textAlign: "left",
-                  padding: "10px 16px",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                  borderRadius: 6,
-                }}
-                onClick={() => setOpenTask(openTask === idx ? null : idx)}
-              >
-                {task.name}
-              </button>
-              {openTask === idx && (
-                <div style={{padding: "10px 16px", background: "#fff"}}>
-                  <p>{task.description}</p>
-                </div>
-              )}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section>
-        <h2>Final Project</h2>
-        <p>
-          My final project brings together everything I have learned, showcasing a fully functional and visually appealing web application.
-        </p>
-      </section>
-    </div>
-  );
-}
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Vize | Portfolio Davida Lokaje</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: sans-serif; max-width: 800px; margin: 0 auto; padding: 32px; background: #f6f8fa; }
+    h1, h2 { color: #2d3748; }
+    .nav { margin: 24px 0 40px 0; }
+    .nav a { display: inline-block; background: #3182ce; color: #fff; text-decoration: none; padding: 10px 20px; border-radius: 6px; margin-right: 12px; margin-bottom: 12px; font-weight: bold; transition: background 0.2s; }
+    .nav a:hover { background: #2b6cb0; }
+  </style>
+</head>
+<body>
+  <h1>Moje vize</h1>
+  <div class="nav">
+    <a href="index.html">Domů</a>
+    <a href="about.html">O mně</a>
+    <a href="tasks.html">Úkoly</a>
+    <a href="final-project.html">Finální projekt</a>
+  </div>
+  <section>
+    <p>Moje vize je vytvářet přehledné, moderní a přístupné weby, které lidem usnadňují práci i zábavu.</p>
+  </section>
+</body>
+</html>
