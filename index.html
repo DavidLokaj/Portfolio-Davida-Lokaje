@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang=""cs">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>David Lokaj Portfolio</title>
@@ -9,11 +9,29 @@
       font-family: sans-serif;
       max-width: 800px;
       margin: 0 auto;
-      padding: 16px;
+      padding: 32px;
       background: #f6f8fa;
     }
     h1, h2 {
       color: #2d3748;
+    }
+    .nav {
+      margin: 24px 0 40px 0;
+    }
+    .nav a {
+      display: inline-block;
+      background: #3182ce;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin-right: 12px;
+      margin-bottom: 12px;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+    .nav a:hover {
+      background: #2b6cb0;
     }
     section {
       margin-bottom: 32px;
@@ -51,21 +69,30 @@
 <body>
   <h1>David Lokaj Portfolio</h1>
 
-  <section>
+  <p>Welcome to my portfolio! Use the navigation below to explore each section:</p>
+
+  <div class="nav">
+    <a href="#introduction">Introduction</a>
+    <a href="#about">About Me</a>
+    <a href="#tasks">Tasks</a>
+    <a href="#final-project">Final Project</a>
+  </div>
+
+  <section id="introduction">
     <h2>Introduction</h2>
     <p>
       Welcome to my portfolio! Here, you can explore my journey in web development, discover the projects I've worked on, and see my final project.
     </p>
   </section>
 
-  <section>
+  <section id="about">
     <h2>About Me</h2>
     <p>
       My name is David Lokaj. I am passionate about building user-friendly and accessible web applications. This site highlights my progress, key tasks, and final project.
     </p>
   </section>
 
-  <section>
+  <section id="tasks">
     <h2>Tasks</h2>
     <div class="task-box">
       <button class="task-btn" onclick="toggleTask(1)">Task 1</button>
@@ -99,7 +126,7 @@
     </div>
   </section>
 
-  <section>
+  <section id="final-project">
     <h2>Final Project</h2>
     <p>
       My final project is a showcase of all the skills I developed throughout my learning journey. It is a fully functional, visually appealing web application designed with best practices in mind.
@@ -109,7 +136,10 @@
   <script>
     function toggleTask(n) {
       for (let i = 1; i <= 5; i++) {
-        document.getElementById('task-desc-' + i).style.display = (i === n && document.getElementById('task-desc-' + i).style.display === 'none') ? 'block' : 'none';
+        document.getElementById('task-desc-' + i).style.display =
+          (i === n && document.getElementById('task-desc-' + i).style.display === 'none')
+            ? 'block'
+            : 'none';
       }
     }
   </script>
