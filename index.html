@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>David Lokaj Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 16px;
+      background: #f6f8fa;
+    }
+    h1, h2 {
+      color: #2d3748;
+    }
+    section {
+      margin-bottom: 32px;
+      background: #fff;
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    .task-box {
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      background: #f5f5f5;
+    }
+    .task-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 12px 16px;
+      font-weight: bold;
+      text-align: left;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 1rem;
+      color: #2d3748;
+    }
+    .task-desc {
+      padding: 10px 16px;
+      background: #fff;
+      border-radius: 0 0 6px 6px;
+      border-top: 1px solid #d1d5db;
+    }
+  </style>
+</head>
+<body>
+  <h1>David Lokaj Portfolio</h1>
+
+  <section>
+    <h2>Introduction</h2>
+    <p>
+      Welcome to my portfolio! Here, you can explore my journey in web development, discover the projects I've worked on, and see my final project.
+    </p>
+  </section>
+
+  <section>
+    <h2>About Me</h2>
+    <p>
+      My name is David Lokaj. I am passionate about building user-friendly and accessible web applications. This site highlights my progress, key tasks, and final project.
+    </p>
+  </section>
+
+  <section>
+    <h2>Tasks</h2>
+    <div class="task-box">
+      <button class="task-btn" onclick="toggleTask(1)">Task 1</button>
+      <div class="task-desc" id="task-desc-1" style="display:none;">
+        In Task 1, I learned the basics of web development, including how to structure HTML and apply simple styling with CSS.
+      </div>
+    </div>
+    <div class="task-box">
+      <button class="task-btn" onclick="toggleTask(2)">Task 2</button>
+      <div class="task-desc" id="task-desc-2" style="display:none;">
+        Task 2 introduced me to interactive web features using JavaScript, allowing for dynamic content and better user experiences.
+      </div>
+    </div>
+    <div class="task-box">
+      <button class="task-btn" onclick="toggleTask(3)">Task 3</button>
+      <div class="task-desc" id="task-desc-3" style="display:none;">
+        In Task 3, I focused on responsive design, making sure my portfolio looks great on all devices, from phones to desktops.
+      </div>
+    </div>
+    <div class="task-box">
+      <button class="task-btn" onclick="toggleTask(4)">Task 4</button>
+      <div class="task-desc" id="task-desc-4" style="display:none;">
+        Task 4 was all about accessibility—ensuring that everyone can use my site, regardless of their abilities or technology.
+      </div>
+    </div>
+    <div class="task-box">
+      <button class="task-btn" onclick="toggleTask(5)">Task 5</button>
+      <div class="task-desc" id="task-desc-5" style="display:none;">
+        In Task 5, I deployed my final project online, bringing together everything I learned into a complete, shareable web application.
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Final Project</h2>
+    <p>
+      My final project is a showcase of all the skills I developed throughout my learning journey. It is a fully functional, visually appealing web application designed with best practices in mind.
+    </p>
+  </section>
+
+  <script>
+    function toggleTask(n) {
+      for (let i = 1; i <= 5; i++) {
+        document.getElementById('task-desc-' + i).style.display = (i === n && document.getElementById('task-desc-' + i).style.display === 'none') ? 'block' : 'none';
+      }
+    }
+  </script>
+</body>
+</html>
