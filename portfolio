@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Davida Lokaje</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    /* Základní nastavení */
+    body {
+      font-family: sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 32px;
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                  url('images/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+    }
+
+    h1, h2 {
+      color: #fff;
+    }
+
+    /* Navigace nahoře */
+    .nav {
+      margin: 24px 0 40px 0;
+      text-align: center;
+    }
+
+    .nav a {
+      display: inline-block;
+      background: #3182ce;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      margin: 0 6px 12px 6px;
+      font-weight: bold;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .nav a:hover {
+      background: #2b6cb0;
+      transform: translateY(-2px);
+    }
+
+    /* Sekce obsahu */
+    section {
+      margin-bottom: 32px;
+      background: rgba(255, 255, 255, 0.1); /* jemně průhledné pozadí */
+      padding: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    }
+
+    /* Obrázky */
+    img {
+      display: block;
+      margin: 0 auto 16px auto;
+      border-radius: 8px;
+      max-width: 300px;
+      height: auto;
+    }
+
+    /* Číslované seznamy */
+    ol {
+      padding-left: 20px;
+    }
+
+    ol li {
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Portfolio Davida Lokaje</h1>
+
+  <div class="nav">
+    <a href="index.html">Úvod</a>
+    <a href="about.html">O mně</a>
+    <a href="tasks.html">Úkoly</a>
+    <a href="final-project.html">Finální projekt</a>
+  </div>
+
+  <section>
+    <h2>O tomto webu</h2>
+    <p>
+      Tento web prezentuje moji práci a pokrok v rámci projektu ZPC 2025.
+      Najdete zde jednotlivé úkoly, mé osobní cíle a závěrečný projekt.
+    </p>
+  </section>
+
+  <section>
+    <h2>Popis úkolu</h2>
+    <p>Prvním úkolem do předmětu ZPC bylo vytvoření vlastních stránek, postup byl následující:</p>
+    <ol>
+      <li>Instalace potřebného softwaru (Hugo, Git, Visual Studio Code).</li>
+      <li>Vytvoření nového projektu.</li>
+      <li>Přidání šablony a základního obsahu.</li>
+      <li>Zprovoznění lokální verze.</li>
+      <li>Nahrání na GitHub Pages pomocí Actions.</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>Jak začít</h2>
+    <p>
+      Začněte v sekci <strong>Úvod</strong>, kde najdete první kroky mé cesty.
+      Poté si můžete projít <strong>Úkoly</strong>, které popisují jednotlivé etapy mé práce.
+    </p>
+  </section>
+
+</body>
+</html>
