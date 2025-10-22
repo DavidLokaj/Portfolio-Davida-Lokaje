@@ -12,10 +12,15 @@
       margin: 0 auto;
       padding: 32px;
       background: #f6f8fa;
+      line-height: 1.6; /* lepší čitelnost textu */
     }
 
     h1, h2 {
       color: #2d3748;
+    }
+
+    p {
+      margin-bottom: 16px; /* mezera mezi odstavci */
     }
 
     .nav {
@@ -49,63 +54,65 @@
 
     /* === Obrázky === */
     :root {
-      --image-width: 400px; /* <== zde můžeš změnit velikost všech obrázků najednou */
+      --image-width: 400px; /* <== uprav pro změnu velikosti všech obrázků */
     }
 
     .img-uniform {
       display: block;
       width: var(--image-width);
-      height: auto;
+      height: 250px; /* stejná výška pro všechny */
+      object-fit: cover; /* ořízne přebytek, zachová proporce */
       margin: 16px auto;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-      object-fit: contain;
     }
 
   </style>
 </head>
 <body>
   <h1>Úkol 1</h1>
+
   <div class="nav">
     <a href="index.html">Domů</a>
     <a href="tasks.html">Zpět na Úkoly</a>
   </div>
+
   <section>
-    <h2>3D scanování </h2>
+    <h2>3D scanování</h2>
 
     <p>Na základě podkladá z přednášky a zaškolení jsme měli za úkol nascanovat zadaný objekt, u mě to byl sádrový model obličeje.</p>
 
-    <img src="images/obr_1.jpg" alt="CAD model" class="img-uniform"> 
-    
-    <p>Nejprve jsem začal zapojením scanneru simcan k PC a zkalibrování pomocí kalibrační desky, následovalo nanesení bodů na model tak,
-    aby byly vidět vždy alespoň 3 body v každém pohledu, snaha byla aby při scanování vnitřní strany modelu bylo zachyceno co nejvíce bodů
-    i s vnější strany, kvůli co nejpřesnější navázání obou scanů.</p>
+    <img src="images/obr_1.jpg" alt="CAD model" class="img-uniform">
 
-    <img src="images/imagine_1_s.jpg" alt="dělení podélné" class="img-uniform"> 
-    <img src="images/imagine_2_s.jpg" alt="dělení příčné" class="img-uniform"> 
-    <img src="images/imagine_3_s.jpg" alt="dělení podélné" class="img-uniform"> 
+    <p>Nejprve jsem začal zapojením scanneru Simcan k PC a zkalibrováním pomocí kalibrační desky. Následovalo nanesení bodů na model tak,
+    aby byly vidět vždy alespoň 3 body v každém pohledu. Snaha byla, aby při scanování vnitřní strany modelu bylo zachyceno co nejvíce bodů
+    i z vnější strany kvůli co nejpřesnějšímu navázání obou scanů.</p>
+
+    <img src="images/imagine_1_s.jpg" alt="dělení podélné" class="img-uniform">
+    <img src="images/imagine_2_s.jpg" alt="dělení příčné" class="img-uniform">
+    <img src="images/imagine_3_s.jpg" alt="dělení podélné" class="img-uniform">
     <img src="images/imagine_4_s.jpg" alt="dělení příčné" class="img-uniform">
-    <img src="images/imagine_5_s.jpg" alt="dělení příčné" class="img-uniform"> 
-    
-    <p>Dále proběhlo samotné scannování, zde nebylo potřeba nijak upravovat povrch kvůli odleskům. Pro nastavení scanu jsem použil výchozí nastavení
-    dle přiložené prezentace, nastavwní velikosti bylo na large, které se pro velikost mého modelu hodilo nejvíce</p>
+    <img src="images/imagine_5_s.jpg" alt="dělení příčné" class="img-uniform">
 
-    <img src="images/obr.jpg" alt="Rozložení výpalu" class="img-uniform"> 
+    <p>Dále proběhlo samotné scanování – zde nebylo potřeba nijak upravovat povrch kvůli odleskům. Pro nastavení scanu jsem použil výchozí
+    hodnoty dle přiložené prezentace. Nastavení velikosti bylo na <em>Large</em>, které se pro velikost mého modelu hodilo nejvíce.</p>
+
+    <img src="images/obr.jpg" alt="Rozložení výpalu" class="img-uniform">
 
     <p>První pokus o řezání neproběhl optimálně. Laser byl nastaven na 
-    <strong>maximální výkon 55 %</strong>, <strong>minimální výkon 50 %</strong> a <strong>rychlost posuvu 55 mm/s</strong>. 
+    <strong>maximální výkon 55 %</strong>, <strong>minimální výkon 50 %</strong> a <strong>rychlost posuvu 55 mm/s</strong>.
     Tyto parametry se ukázaly jako nedostatečné, neboť u části dílů nedošlo k úplnému prořezu materiálu a některé bylo nutné 
     <strong>dodatečně dořezávat ručně</strong>.</p>
 
-    <img src="images/Díly vyloupané z kartonu.jpg" alt="Vyloupané díly" class="img-uniform"> 
-    
+    <img src="images/Díly vyloupané z kartonu.jpg" alt="Vyloupané díly" class="img-uniform">
+
     <p>Zámky o šířce <strong>5 mm</strong> fungovaly velmi dobře v případech, kdy do jednoho dílu byly zasazeny maximálně čtyři další díly vedle sebe. 
     V mém návrhu však bylo nutné vložit až <strong>šestnáct</strong> příčných dílů, což vedlo k 
     <strong>deformaci a prohnutí podélných dílů</strong> (viz obr. model 1).</p>
 
-    <img src="images/Model č_1.jpg" alt="Model 1" class="img-uniform"> 
+    <img src="images/Model č_1.jpg" alt="Model 1" class="img-uniform">
     <img src="images/Model č_1_1.jpg" alt="Model 1 detail" class="img-uniform">
-    
+
     <p>Z toho důvodu byl proveden <strong>druhý pokus</strong> s upravenými parametry laseru — 
     <strong>maximální výkon 70 %</strong>, <strong>minimální výkon 65 %</strong> a <strong>rychlost 55 mm/s</strong>. 
     Při těchto hodnotách se podařilo jednotlivé díly <strong>zcela oddělit</strong> bez nutnosti dodatečných úprav. 
@@ -115,8 +122,9 @@
     <img src="images/Model_2_2b.jpg" alt="Model 2" class="img-uniform">
     <img src="images/Model_2_c.jpg" alt="Model 2" class="img-uniform">
     <img src="images/Model_2_Z.jpg" alt="Model 2" class="img-uniform">
-    
+
     <p>Díky drobným úpravám zámků, které nyní umožňovaly větší vůli mezi spoji, bylo <strong>sestavení modelu výrazně snazší</strong>. 
     Celkový výsledek je patrný na <strong>obr. XY</strong>, kde je zobrazen kompletně sestavený kartonový model.</p>
+  </section>
 </body>
 </html>
