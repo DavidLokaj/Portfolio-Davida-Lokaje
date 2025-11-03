@@ -11,6 +11,7 @@
       margin: 0 auto; 
       padding: 32px; 
       background: #f6f8fa; 
+      line-height: 1.6;
     }
     h1, h2 { 
       color: #2d3748; 
@@ -44,8 +45,11 @@
       display: block; 
       margin: 0 auto 16px auto; 
       border-radius: 8px; 
-      max-width: 300px; /* omezení šířky obrázků */
-      height: auto;     /* zachování poměru stran */
+      max-width: 100%; 
+      height: auto;
+    }
+    .img-uniform { 
+      max-width: 300px; 
     }
   </style>
 </head>
@@ -58,30 +62,31 @@
   </div>
 
   <section>
-    <h2>část 1 – Návrh loga</h2>
-    <img src="images/Logo_navrh.jpg" alt="Návrh loga"> 
-    <p>Prvním úkolem bylo vytvořit návrh loga. Já jsem použil svoje iniciály a spojil je dohromady v jeden celek.</p>
+    <h2>Část 1 – Návrh loga</h2>
+    <img src="images/logo_navrh.jpg" alt="Návrh loga"> 
+    <p>Prvním úkolem bylo vytvořit návrh loga. Použil jsem svoje iniciály a spojil je dohromady v jeden celek.</p>
   </section>
 
   <section>
-    <h2>část 2 – Finální nalepka</h2>
-    <img src="images/Logo_nalepka.jpg" alt="Finální nalepka"> 
-    <p>Zde bylo vyřezáno logo do folie na ploteru a následné odlepení od zbytku folie, a nalepení na moji nabíječku na notebook.</p>
+    <h2>Část 2 – Finální nálepka</h2>
+    <img src="images/logo_nalepka.jpg" alt="Finální nálepka"> 
+    <p>Zde bylo vyřezáno logo do fólie na plotru, následně odlepeno od zbytku fólie a nalepeno na moji nabíječku na notebook.</p>
   </section>
 
   <section>
-    <h2>část 3 – Nálepky na model</h2> 
-    <img src="images/Preneseny_napisy_1.jpg" alt="logo 1"> 
-    <img src="images/Preneseny_napisy_2.jpg" alt="logo 2"> 
-    <img src="images/Preneseny_napisy_3.jpg" alt="logo 3"> 
+    <h2>Část 3 – Nálepky na model</h2> 
+    <img src="images/preneseny_napisy_1.jpg" alt="Logo 1"> 
+    <img src="images/preneseny_napisy_2.jpg" alt="Logo 2"> 
+    <img src="images/preneseny_napisy_3.jpg" alt="Logo 3"> 
     <p>
-      Po zaškolení na plotter jsem jej využil pro dokončení reklamního modelu pneuracer pro ukázky na veletrzích a jiných školních akcích. 
-      Byl zde použit opačný postup než u předchozího loga – na ploteru jsem vyřezal loga sponzorů SMC, Strojlabu, ústavu konstruování, 
-      fakulty strojního inženýrství a našeho loga pneuracer. Následně vyloupal vnitřní části, a zbytek použil jako maskování na karoserii pro nalakování nápisů barvou kvůli futurističtějšímu vzhledu. 
+      Po zaškolení na plotter jsem jej využil pro dokončení reklamního modelu Pneuracer pro ukázky na veletrzích a jiných školních akcích. 
+      Byl zde použit opačný postup než u předchozího loga – na plotru jsem vyřezal loga sponzorů SMC, Strojlabu, Ústavu konstruování, 
+      Fakulty strojního inženýrství a našeho loga Pneuracer. Následně jsem vyloupal vnitřní části a zbytek použil jako maskování 
+      na karoserii pro nalakování nápisů barvou kvůli futurističtějšímu vzhledu. 
     </p>
   </section>
 
-   <section>
+  <section>
     <h2>Výroba kartonového modelu pomocí laserového řezání</h2>
 
     <p>Na základě vlastního návrhu byl v programu <strong>SolidWorks</strong> vytvořen 3D model konstrukce (viz obr. 1). 
@@ -94,8 +99,8 @@
     Aby bylo možné jednotlivé prvky přesně sestavit, byly do modelu doplněny <strong>zámky</strong>, 
     které zajišťují vzájemnou polohu dílů.</p>
 
-    <img src="images/Obr_2.jpg" alt="dělení podélné" class="img-uniform"> 
-    <img src="images/obr_3.jpg" alt="dělení příčné" class="img-uniform"> 
+    <img src="images/obr_2.jpg" alt="Dělení podélné" class="img-uniform"> 
+    <img src="images/obr_3.jpg" alt="Dělení příčné" class="img-uniform"> 
     
     <p>Hotový CAD model byl následně převeden do <strong>2D formátu DXF</strong>, který slouží jako podklad pro přípravu dat pro laserové řezání. 
     DXF soubory byly importovány do programu <strong>Inkscape</strong> (viz obr. 4), kde byly optimalizovány pro výřez z kartonové desky 
@@ -109,28 +114,26 @@
     Tyto parametry se ukázaly jako nedostatečné, neboť u části dílů nedošlo k úplnému prořezu materiálu a některé bylo nutné 
     <strong>dodatečně dořezávat ručně</strong>.</p>
 
-    <img src="images/Díly vyloupané z kartonu.jpg" alt="Vyloupané díly" class="img-uniform"> 
+    <img src="images/dily_vyloupane.jpg" alt="Vyloupané díly" class="img-uniform"> 
     
     <p>Zámky o šířce <strong>5 mm</strong> fungovaly velmi dobře v případech, kdy do jednoho dílu byly zasazeny maximálně čtyři další díly vedle sebe. 
     V mém návrhu však bylo nutné vložit až <strong>šestnáct</strong> příčných dílů, což vedlo k 
     <strong>deformaci a prohnutí podélných dílů</strong> (viz obr. model 1).</p>
 
-    <img src="images/Model č_1.jpg" alt="Model 1" class="img-uniform"> 
-    <img src="images/Model č_1_1.jpg" alt="Model 1 detail" class="img-uniform">
+    <img src="images/model_1.jpg" alt="Model 1" class="img-uniform"> 
+    <img src="images/model_1_detail.jpg" alt="Model 1 detail" class="img-uniform">
     
     <p>Z toho důvodu byl proveden <strong>druhý pokus</strong> s upravenými parametry laseru — 
     <strong>maximální výkon 70 %</strong>, <strong>minimální výkon 65 %</strong> a <strong>rychlost 55 mm/s</strong>. 
     Při těchto hodnotách se podařilo jednotlivé díly <strong>zcela oddělit</strong> bez nutnosti dodatečných úprav. 
     Výsledné výřezy byly také <strong>estetičtější</strong> a přesnější (viz obr. vypálené díly).</p>
 
-    <img src="images/Model_2_b.jpg" alt="Model 2" class="img-uniform">
-    <img src="images/Model_2_2b.jpg" alt="Model 2" class="img-uniform">
-    <img src="images/Model_2_c.jpg" alt="Model 2" class="img-uniform">
-    <img src="images/Model_2_Z.jpg" alt="Model 2" class="img-uniform">
+    <img src="images/model_2b.jpg" alt="Model 2" class="img-uniform">
+    <img src="images/model_2c.jpg" alt="Model 2" class="img-uniform">
+    <img src="images/model_2z.jpg" alt="Model 2" class="img-uniform">
     
     <p>Díky drobným úpravám zámků, které nyní umožňovaly větší vůli mezi spoji, bylo <strong>sestavení modelu výrazně snazší</strong>. 
     Celkový výsledek je patrný na <strong>obr. XY</strong>, kde je zobrazen kompletně sestavený kartonový model.</p>
   </section>
-  
 </body>
 </html>
