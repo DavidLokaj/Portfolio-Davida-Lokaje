@@ -54,19 +54,21 @@
 
     /* === Obrázky === */
     :root {
-      --image-width: 400px; /* <== uprav pro změnu velikosti všech obrázků */
+      /* 🔧 Jednotná výška všech obrázků */
+      --img-height: 300px;
     }
 
     .img-uniform {
       display: block;
-      width: var(--image-width);
-      height: 250px; /* stejná výška pro všechny */
-      object-fit: cover; /* ořízne přebytek, zachová proporce */
+      height: var(--img-height);  /* výška obrázku */
+      width: auto;                /* šířka se dopočítá podle poměru stran */
+      max-width: 100%;            /* obrázek se nepřetáhne přes stránku */
+      object-fit: contain;        /* zobrazí celý obrázek bez ořezu */
       margin: 16px auto;
       border-radius: 8px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      background: #fff;           /* neutrální pozadí za průhlednými oblastmi */
     }
-
   </style>
 </head>
 <body>
