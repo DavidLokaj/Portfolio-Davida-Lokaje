@@ -5,6 +5,11 @@
   <title>Úkol 1 | Portfolio Davida Lokaje</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
+    :root {
+      /* 🔧 Zde můžeš jednoduše nastavit velikost všech obrázků */
+      --img-size: 300px;
+    }
+
     body { 
       font-family: sans-serif; 
       max-width: 800px; 
@@ -13,12 +18,15 @@
       background: #f6f8fa; 
       line-height: 1.6;
     }
+
     h1, h2 { 
       color: #2d3748; 
     }
+
     .nav { 
       margin: 24px 0 40px 0; 
     }
+
     .nav a { 
       display: inline-block; 
       background: #3182ce; 
@@ -31,9 +39,11 @@
       font-weight: bold; 
       transition: background 0.2s; 
     }
+
     .nav a:hover { 
       background: #2b6cb0; 
     }
+
     section { 
       margin-bottom: 32px; 
       background: #fff; 
@@ -41,15 +51,16 @@
       border-radius: 8px; 
       box-shadow: 0 2px 8px rgba(0,0,0,0.04); 
     }
+
+    /* 🖼️ Jednotná velikost obrázků */
     img { 
       display: block; 
       margin: 0 auto 16px auto; 
       border-radius: 8px; 
-      max-width: 100%; 
-      height: auto;
-    }
-    .img-uniform { 
-      max-width: 300px; 
+      width: var(--img-size);
+      height: var(--img-size);
+      object-fit: cover; /* zachová poměr stran, vyplní plochu */
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
   </style>
 </head>
