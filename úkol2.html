@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     :root {
-      /* 🔧 Zde můžeš jednoduše nastavit velikost všech obrázků */
-      --img-size: 300px;
+      /* 🔧 Nastav jednotnou výšku všech obrázků (např. 200px, 300px, 400px) */
+      --img-height: 300px;
     }
 
     body { 
@@ -52,14 +52,14 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.04); 
     }
 
-    /* 🖼️ Jednotná velikost obrázků */
+    /* 🖼️ Jednotná výška obrázků, zachování poměru stran */
     img { 
       display: block; 
       margin: 0 auto 16px auto; 
       border-radius: 8px; 
-      width: var(--img-size);
-      height: var(--img-size);
-      object-fit: cover; /* zachová poměr stran, vyplní plochu */
+      height: var(--img-height);
+      width: auto; /* šířka se dopočítá podle poměru stran */
+      object-fit: contain; /* zobrazí celý obrázek bez ořezu */
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     }
   </style>
