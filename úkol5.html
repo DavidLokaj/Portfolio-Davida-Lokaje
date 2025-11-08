@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <style>
     :root {
-      /* 🔧 Nastav jednotnou výšku všech obrázků (např. 200px, 300px, 400px) */
+      /* Jednotná výška obrázků */
       --img-height: 250px;
     }
 
@@ -52,15 +52,32 @@
       box-shadow: 0 2px 8px rgba(0,0,0,0.04); 
     }
 
-    /* 🖼️ Jednotná výška obrázků, zachování poměru stran */
+    /* Obrázky */
     img { 
       display: block; 
       margin: 0 auto 16px auto; 
       border-radius: 8px; 
       height: var(--img-height);
-      width: auto; /* šířka se dopočítá podle poměru stran */
-      object-fit: contain; /* zobrazí celý obrázek bez ořezu */
+      width: auto;
+      object-fit: contain;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    /* Video container pro centrální zarovnání a styl */
+    .video-container {
+      display: block;
+      width: 80%;           /* změnou procenta upravuješ velikost videa */
+      margin: 0 auto 16px;  /* zarovnání na střed a mezera dole */
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      overflow: hidden;     /* zaoblené rohy pro iframe */
+    }
+
+    .video-container iframe {
+      width: 100%;
+      aspect-ratio: 16 / 9; /* zachová původní formát videa */
+      border: none;
+      display: block;
     }
   </style>
 </head>
@@ -73,26 +90,28 @@
   </div>
 
   <section>
-    <h2>Část 1 – Návrh mechanismu</h2>
-   
-    <p>Mini projekt 3D tisk, úkolem bylo navrhnout mechanismus a ten následně vytisknout na 3D tiskárně.
-    Já jsem se vybral diferenciál.</p>
- 
-    <img src="images/imagine_diff_krok_2.jpg" alt="Logo 1"> 
-    <img src="images/imagine_diff_krok_3.jpg" alt="Logo 1"> 
-    <img src="images/imagine_diff_krok_4.jpg" alt="Logo 1"> 
-    
+    <h2>Návrh a sestavení elektrického obvodu ovládaného arduinem</h2>
+    <p>Mini projekt elektro byl zaměřen na zapojování elektrických obvodů, pochopení základních principů a programování arduina.</p>
+    <img src="images/imagine_schema_zapojeni_2.jpg" alt="schema zapojeni"> 
+    <p>Zvolil jsem el obvod obsahující jeden zvukový snímač vzdálenosti, jeden el. odpor, led diodu a arduino...</p>
   </section>
-  <section>
-    <h2>Část 2 – 3D tisk a složení </h2>
 
-    <p>Tisk byl proveden na tiskárně průša 3.9s a byl použit filament PLA.</p>
-  
-  <img src="images/imagine_diff_rozlozeny.jpg" alt="Logo 1"> 
-  <img src="images/imagine_diff_skladani_1.jpg" alt="Logo 1"> 
-  <img src="images/imagine_diff_skladani_2.jpg" alt="Logo 1">
-  <img src="images/imagine_diff_skladani_h.jpg" alt="Logo 1"> 
-  
+  <section>
+    <h2>Zapojení arduina</h2>
+    <img src="images/imagine_schema_zapojeni_2.jpg" alt="schema zapojeni"> 
+    <p>Arduino jsem zapojil dle schématu a po nahrání programu pomocí Arduino IDE vše funguje.</p>
+    <img src="images/imagine_poloha_1.jpg" alt="Logo 1"> 
+    <img src="images/imagine_poloha_2.jpg" alt="Logo 1"> 
+    <img src="images/imagine_poloha_3.jpg" alt="Logo 1"> 
+
+    <!-- Video z Google Drive -->
+    <div class="video-container">
+      <iframe 
+        src="https://drive.google.com/file/d/1K8sixSui2AMY35clvWg4en_x3S-drfhu/preview"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
   </section>
 
 </body>
