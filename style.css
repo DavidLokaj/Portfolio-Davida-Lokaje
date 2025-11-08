@@ -83,6 +83,8 @@ img {
   height: var(--video-height);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
 /* === Task list (bubliny úkolů 1-5) === */
 .task-list a {
   display: block;
@@ -109,7 +111,6 @@ img {
 .task-list a:nth-child(-n+5):hover {
   background-color: #2b6cb0;
 }
-
 
 /* === Odkazy uvnitř textu === */
 a {
