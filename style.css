@@ -17,7 +17,7 @@ body {
   min-height: 100vh;
 
   /* Pozadí přes celou obrazovku */
-  background: url("pozadi_nizke.jpg") no-repeat center center fixed;
+  background: url("background-tech.jpg") no-repeat center center fixed;
   background-size: cover;
   color: #f4f4f4; /* světlý text pro čitelnost */
 }
