@@ -16,26 +16,23 @@ body {
   line-height: 1.6;
   min-height: 100vh;
 
-  /* Pozadí přes celou obrazovku */
-  background: url("background_tech.jpg") no-repeat center center fixed;
+  /* Celé pozadí stránky */
+  background: url("images/background-tech.jpg") no-repeat center center fixed;
   background-size: cover;
-  color: #f4f4f4; /* světlý text pro čitelnost */
+  color: #f4f4f4;
 }
 
-/* ======================
-   Kontejner obsahu
-   ====================== */
 .content {
   max-width: 800px;
   margin: 0 auto;
   padding: 32px;
 
-  /* Overlay jen pro obsah, text čitelný */
-  background: rgba(0, 0, 0, 0.3);
-
+  /* Overlay méně výrazný */
+  background: rgba(0, 0, 0, 0.05); /* nebo transparent */
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
+
 
 /* ======================
    Nadpisy
