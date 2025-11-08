@@ -16,11 +16,11 @@ body {
 }
 
 .content {
-  max-width: 800px;
+  max-width: 500px;
   margin: 0 auto;
   padding: 32px;
-  background-color: var(--overlay-bg);
-  border-radius: 10px;
+  background-color: transparent; /* průhledné */
+  border-radius: 10px; /* můžeš zachovat, aby byly rohy jemné */
 }
 
 /* === Navigace === */
@@ -53,10 +53,10 @@ h1, h2 {
 /* === Sekce === */
 section {
   margin-bottom: 32px;
-  background: #fff;
+  background: transparent; /* průhledné místo #fff */
   padding: 16px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* můžeš nechat jemný stín */
 }
 
 /* === Obrázky === */
