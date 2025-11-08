@@ -83,43 +83,33 @@ img {
   height: var(--video-height);
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-/* === Task list (bubliny úkolů) === */
+/* === Task list (bubliny úkolů 1-5) === */
 .task-list a {
   display: block;
   padding: 10px 16px;
   border-radius: 6px;
   margin-bottom: 12px;
   text-decoration: none;
-  color: #ffffff; /* text uvnitř bubliny zůstává bílý */
+  color: #ffffff; /* text uvnitř bubliny */
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: background 0.2s, transform 0.2s;
   font-weight: bold;
 }
 
-/* Hover efekt pro bubliny */
+/* Hover efekt pro všechny bubliny */
 .task-list a:hover {
   transform: translateY(-2px);
 }
 
-/* Zelené bubliny pro úkoly 1-5 */
+/* Modré bubliny pro úkoly 1-5 */
 .task-list a:nth-child(-n+5) {
-  background-color: #28a745;
-}
-
-.task-list a:nth-child(-n+5):hover {
-  background-color: #218838;
-}
-
-/* Ostatní bubliny (např. úkol 6) */
-.task-list a:nth-child(n+6) {
   background-color: #3182ce;
 }
 
-.task-list a:nth-child(n+6):hover {
+.task-list a:nth-child(-n+5):hover {
   background-color: #2b6cb0;
 }
+
 
 /* === Odkazy uvnitř textu === */
 a {
