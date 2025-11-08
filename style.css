@@ -104,10 +104,10 @@ img {
 
 /* === Odkazy uvnitř textu === */
 a {
-  color: #3182ce;
+  color: #ffffff; /* normální stav */
   text-decoration: underline;
 }
 
 a:hover {
-  color: #2b6cb0;
+  color: #ffd700; /* nebo jiná barva při najetí */
 }
