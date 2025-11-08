@@ -3,9 +3,9 @@
   --img-height: 250px;       /* výška obrázků */
   --video-width: 80%;        /* šířka videí */
   --video-height: 480px;     /* výška videí */
-  --overlay-bg: rgba(255, 255, 255, 0.9); /* overlay pro čitelnost textu */
 }
 
+/* === Tělo stránky === */
 body {
   font-family: sans-serif;
   margin: 0;
@@ -13,14 +13,16 @@ body {
   background: url('images/background_tech.jpg') no-repeat center center fixed;
   background-size: cover;
   line-height: 1.6;
+  color: #ffffff; /* bílé texty všude */
 }
 
+/* === Hlavní obsah === */
 .content {
-  max-width: 500px;
+  max-width: 800px;
   margin: 0 auto;
   padding: 32px;
   background-color: transparent; /* průhledné */
-  border-radius: 10px; /* můžeš zachovat, aby byly rohy jemné */
+  border-radius: 10px;
 }
 
 /* === Navigace === */
@@ -47,16 +49,16 @@ body {
 
 /* === Nadpisy === */
 h1, h2 {
-  color: #2d3748;
+  color: #ffffff;
 }
 
 /* === Sekce === */
 section {
   margin-bottom: 32px;
-  background: transparent; /* průhledné místo #fff */
+  background: transparent; /* průhledné */
   padding: 16px;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* můžeš nechat jemný stín */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
 }
 
 /* === Obrázky === */
@@ -86,28 +88,45 @@ img {
 /* === Task list (bubliny úkolů) === */
 .task-list a {
   display: block;
-  background: #fff;
   padding: 10px 16px;
   border-radius: 6px;
   margin-bottom: 12px;
   text-decoration: none;
-  color: #2d3748;
+  color: #ffffff; /* text uvnitř bubliny zůstává bílý */
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
   transition: background 0.2s, transform 0.2s;
   font-weight: bold;
 }
 
+/* Hover efekt pro bubliny */
 .task-list a:hover {
-  background: #e2e8f0;
   transform: translateY(-2px);
+}
+
+/* Zelené bubliny pro úkoly 1-5 */
+.task-list a:nth-child(-n+5) {
+  background-color: #28a745;
+}
+
+.task-list a:nth-child(-n+5):hover {
+  background-color: #218838;
+}
+
+/* Ostatní bubliny (např. úkol 6) */
+.task-list a:nth-child(n+6) {
+  background-color: #3182ce;
+}
+
+.task-list a:nth-child(n+6):hover {
+  background-color: #2b6cb0;
 }
 
 /* === Odkazy uvnitř textu === */
 a {
-  color: #ffffff; /* normální stav */
+  color: #ffffff; /* bílé odkazy mimo bubliny */
   text-decoration: underline;
 }
 
 a:hover {
-  color: #ffd700; /* nebo jiná barva při najetí */
+  color: #ffd700; /* kontrastní barva při hover */
 }
