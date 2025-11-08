@@ -1,118 +1,121 @@
-<!DOCTYPE html>
-<html lang="cs">
-<head>
-  <meta charset="UTF-8">
-  <title>Úkol 6 | Portfolio Davida Lokaje</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    :root {
-      /* Jednotná výška obrázků */
-      --img-height: 250px;
-    }
+/* ======================
+   Globální nastavení
+   ====================== */
+:root {
+  --img-height: 250px; /* jednotná výška obrázků */
+  --video-width: 80%;  /* šířka videa */
+}
 
-    body { 
-      font-family: sans-serif; 
-      max-width: 800px; 
-      margin: 0 auto; 
-      padding: 32px; 
-      background: #f6f8fa; 
-      line-height: 1.6;
-    }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
+  background: url("images/background-tech.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #f4f4f4; /* světlý text pro čitelnost */
+}
 
-    h1, h2 { 
-      color: #2d3748; 
-    }
+/* ======================
+   Kontejner obsahu
+   ====================== */
+.content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 32px;
+  background: rgba(0, 0, 0, 0.3); /* jemný overlay */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
 
-    .nav { 
-      margin: 24px 0 40px 0; 
-    }
+/* ======================
+   Nadpisy
+   ====================== */
+h1, h2 {
+  color: #ffffff;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
 
-    .nav a { 
-      display: inline-block; 
-      background: #3182ce; 
-      color: #fff; 
-      text-decoration: none; 
-      padding: 10px 20px; 
-      border-radius: 6px; 
-      margin-right: 12px; 
-      margin-bottom: 12px; 
-      font-weight: bold; 
-      transition: background 0.2s; 
-    }
+/* ======================
+   Navigace
+   ====================== */
+.nav {
+  margin-bottom: 24px;
+}
 
-    .nav a:hover { 
-      background: #2b6cb0; 
-    }
+.nav a {
+  display: inline-block;
+  background: rgba(49, 130, 206, 0.8);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  margin-right: 12px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  transition: background 0.2s;
+}
 
-    section { 
-      margin-bottom: 32px; 
-      background: #fff; 
-      padding: 16px; 
-      border-radius: 8px; 
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04); 
-    }
+.nav a:hover {
+  background: rgba(43, 108, 176, 0.9);
+}
 
-    /* Obrázky */
-    img { 
-      display: block; 
-      margin: 0 auto 16px auto; 
-      border-radius: 8px; 
-      height: var(--img-height);
-      width: auto;
-      object-fit: contain;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    }
+/* ======================
+   Sekce
+   ====================== */
+section {
+  margin-bottom: 32px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
 
-    /* Video container pro centrální zarovnání a styl */
-    .video-container {
-      display: block;
-      width: 80%;           /* změnou procenta upravuješ velikost videa */
-      margin: 0 auto 16px;  /* zarovnání na střed a mezera dole */
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      overflow: hidden;     /* zaoblené rohy pro iframe */
-    }
+/* ======================
+   Obrázky
+   ====================== */
+img {
+  display: block;
+  margin: 16px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  max-width: 100%;
+  height: auto;
+}
 
-    .video-container iframe {
-      width: 100%;
-      aspect-ratio: 16 / 9; /* zachová původní formát videa */
-      border: none;
-      display: block;
-    }
-  </style>
-</head>
-<body>
-  <h1>Úkol 6</h1>
+/* ======================
+   Video
+   ====================== */
+.video-container {
+  display: block;
+  width: var(--video-width);
+  margin: 16px auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  overflow: hidden;
+}
 
-  <div class="nav">
-    <a href="index.html">Domů</a>
-    <a href="tasks.html">Zpět na Úkoly</a>
-  </div>
+.video-container iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  display: block;
+}
 
-  <section>
-    <h2>Návrh a sestavení elektrického obvodu ovládaného arduinem</h2>
-    <p>Mini projekt elektro byl zaměřen na zapojování elektrických obvodů, pochopení základních principů a programování arduina.</p>
-    <img src="images/imagine_schema_zapojeni_2.jpg" alt="schema zapojeni"> 
-    <p>Zvolil jsem el obvod obsahující jeden zvukový snímač vzdálenosti, jeden el. odpor, led diodu a arduino...</p>
-  </section>
+/* ======================
+   Text
+   ====================== */
+p {
+  margin-bottom: 1em;
+}
 
-  <section>
-    <h2>Zapojení arduina</h2>
-    <img src="images/imagine_schema_zapojeni_2.jpg" alt="schema zapojeni"> 
-    <p>Arduino jsem zapojil dle schématu a po nahrání programu pomocí Arduino IDE vše funguje.</p>
-    <img src="images/imagine_poloha_1.jpg" alt="Logo 1"> 
-    <img src="images/imagine_poloha_2.jpg" alt="Logo 1"> 
-    <img src="images/imagine_poloha_3.jpg" alt="Logo 1"> 
+/* Volitelné další styly */
+a {
+  color: #99ccff; /* barva odkazů v textu */
+}
 
-    <!-- Video z Google Drive -->
-    <div class="video-container">
-      <iframe 
-        src="https://drive.google.com/file/d/1K8sixSui2AMY35clvWg4en_x3S-drfhu/preview"
-        allow="autoplay; encrypted-media"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
-
-</body>
-</html>
+a:hover {
+  text-decoration: underline;
+}
