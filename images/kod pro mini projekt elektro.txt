@@ -1,0 +1,45 @@
+kod pro mini projekt elektro 
+
+const int trigPin = 9;
+const int echoPin = 10;
+const int ledPin = 6; // musí být pin s PWM (~), např. 3, 5, 6, 9, 10, 11
+
+long duration;
+int distance;
+int brightness;
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop() {
+  // Změření vzdálenosti
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+
+  duration = pulseIn(echoPin, HIGH);
+  distance = duration * 0.034 / 2; // cm
+
+  // Oříznutí rozsahu vzdáleností
+  if (distance > 50) distance = 20; // maximální vzdálenost
+  if (distance < 5) distance = 5;   // minimální vzdálenost
+
+  // Převod vzdálenosti (5–50 cm) na jas (255–0)
+  brightness = map(distance, 20, 5, 0, 255);
+  brightness = constrain(brightness, 0, 255);
+
+  analogWrite(ledPin, brightness);
+
+  Serial.print("Vzdalenost: ");
+  Serial.print(distance);
+  Serial.print(" cm  |  Jas LED: ");
+  Serial.println(brightness);
+
+  delay(100);
+}
