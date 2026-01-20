@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Zajištění bílého textu a tmavého pozadí podle tvého požadavku */
     body {
       background-color: #1a1a1a;
       color: #ffffff;
@@ -24,7 +23,7 @@
       text-decoration: none;
       font-weight: bold;
     }
-    h1, h2 {
+    h1, h2, h3 {
       border-bottom: 1px solid #444;
       padding-bottom: 10px;
       margin-top: 30px;
@@ -36,15 +35,24 @@
       margin: 20px 0;
       border-radius: 4px;
     }
+    .note {
+      background-color: #333;
+      padding: 10px;
+      border-left: 4px solid #4db8ff;
+      font-style: italic;
+      margin: 10px 0;
+    }
     .video-container {
       margin: 20px 0;
       text-align: center;
     }
-    ul {
-      margin-bottom: 20px;
-    }
     strong {
       color: #4db8ff;
+    }
+    footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #444;
     }
   </style>
 </head>
@@ -57,90 +65,207 @@
       <a href="tasks.html">Zpět na Úkoly</a>
     </nav>
 
-    <h1>Final-projekt: Automatizovaný pořadač Sparex</h1>
+    <h1>Technologický postup výroby automatizovaného systému „Sparex“</h1>
 
     <section>
-      <h2>Cíl projektu</h2>
-      <img src="images/Model_1.jpg" alt="Návrh pořadače" class="img-uniform">
+      <h2>1. Fáze: Vývoj a verifikace řídicího algoritmu</h2>
       <p>
-        Mým cílem je vytvořit <strong>automatizovaný pořadač spojovacího materiálu</strong>. 
-        Projekt využívá moderní technologie, které umožní snadné třídění a uspořádání šroubků, 
-        matic a dalších drobných komponent. Zařízení usnadní práci v dílně tím, že ušetří čas 
-        při hledání a uklízení materiálu.
+        V úvodní fázi byl sestaven funkční model pro testování řídicího programu v prostředí Arduino IDE. 
+        Cílem bylo odladění logiky pohybu, kalibrace kroků motorů a eliminace chyb v komunikaci s drivery 
+        ještě před samotnou stavbou mechanické konstrukce.
       </p>
     </section>
 
     <section>
-      <h2>Použité technologie</h2>
-      <ul>
-        <li><strong>3D tisk</strong> pro výrobu mechanických částí a ložiskových domků.</li>
-        <li><strong>Laserové řezání</strong> pro konstrukci modulů a regálového systému.</li>
-        <li><strong>Mikrokontrolér Arduino</strong> pro kompletní řízení a automatizaci pohybu.</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>1. Vývoj a verifikace algoritmu</h2>
-      <img src="images/obr1.jpg" alt="Testovací model" class="img-uniform">
+      <h2>2. Konstrukční návrh (CAD)</h2>
+      <img src="images/Model_1.jpg" alt="Vizualizace finální sestavy" class="img-uniform">
       <p>
-        V první fázi jsem vytvořil testovací model pro ověření funkcí programu pro Arduino. 
-        Cílem bylo odladit logiku pohybu v osách a komunikaci s drivery TB6600 ještě před 
-        stavbou finální mechanické konstrukce.
+        Po úspěšném ověření elektroniky byla vytvořena kompletní sestava v programu <strong>SolidWorks</strong>. 
+        Na základě 3D modelu byla vygenerována výkresová dokumentace, podle které probíhala výroba jednotlivých komponent.
       </p>
     </section>
 
     <section>
-      <h2>2. Návrh konstrukce a výroba rámu</h2>
-      <img src="images/obr2.jpg" alt="Konstrukce rámu" class="img-uniform">
+      <h2>3. Výroba nosného rámu</h2>
       <p>
-        Konstrukci jsem navrhl v programu <strong>SolidWorks</strong>. Nosný rám je vyroben z ocelových 
-        uzavřených profilů 30x30 mm. Rohové spoje jsou vyztuženy úhelníky z pásoviny, které jsou 
-        přesně svrtány a opatřeny závity M6 pro snadnou montáž a demontáž.
+        Základem zařízení je tuhý rám z <strong>uzavřených ocelových profilů</strong> (čtvercového průřezu) 30x30 mm. 
+        Profily byly děleny na délky 1100 mm a 900 mm s koncovými pokosy pod úhlem 45°. 
+        Dále bylo z ploché oceli 20x5 mm vyrobeno 8 kusů rohových výztuh. Ty byly následně svařeny do pravého úhlu 
+        a opatřeny otvory. Rám byl ustaven do přípravku a fixován pomocí stehových svarů. Po kontrole pravoúhlosti 
+        byly svary dokončeny a zabroušeny. Do výztuh byly vyřezány závity M6 a odpovídající otvory v rámu byly 
+        zvětšeny pro zajištění montážní vůle.
+      </p>
+      <p class="note">Poznámka: Pro zachování souososti byly jednotlivé uzly označeny důlčíkem (1–4).</p>
+    </section>
+
+    <section>
+      <h2>4. Konzoly pohonů a snímačů polohy</h2>
+      <img src="images/Obr_2.jpg" alt="Detail uchycení pohonu" class="img-uniform">
+      <p>
+        Z ocelového plechu byly vyrobeny držáky krokových motorů, napínacích kladek a <strong>koncových spínačů</strong>. 
+        Po ohýbání byly tyto díly ustaveny na horní rámový profil. Držák motoru je k rámu přivařen, zatímco držák 
+        napínacího mechanismu je demontovatelný (připevněn šrouby M6 do vyřezaných závitů).
       </p>
     </section>
 
     <section>
-      <h2>3. Horizontální pojezd (Osa A)</h2>
-      <img src="images/obr3.jpg" alt="Osa A detail" class="img-uniform">
+      <h2>5. Příprava svislých vodicích profilů</h2>
       <p>
-        Hlavní pojezd osy A tvoří profil 40x20 mm. K upevnění pojezdových domků jsem použil 
-        vratové šrouby se zapuštěnou hlavou. Na profil jsou navařeny konzoly pro krokový motor 
-        a napínací mechanismus ozubeného řemene.
+        Do svislých profilů rámu byly vyvrtány a vyřezány závity pro upevnění horních komponent a spodních 
+        držáků regálového systému.
       </p>
     </section>
 
     <section>
-      <h2>4. Lineární vedení a 3D tisk</h2>
-      <img src="images/obr4.jpg" alt="3D tištěné domky" class="img-uniform">
+      <h2>6. Horizontální vedení osy A</h2>
       <p>
-        Pojezdové domky jsou vytištěny z materiálu <strong>PETG</strong>. Využívají systém 8 ložisek 
-        a excentrických čepů, které umožňují přesné vymezení vůle na vodicím profilu. Tím je 
-        zajištěn hladký a přesný pohyb bez vibrací.
+        Hlavní pojezd osy A tvoří uzavřený obdélníkový profil 40x20 mm o délce 1150 mm. Otvory pro 
+        <strong>šrouby s plochou hlavou a čtyřhranem (DIN 603)</strong> byly z lícní strany zahloubeny. Pro zafixování 
+        čtyřhranu šroubu byl otvor upraven jehlovým pilníkem na čtvercový průřez. Na profil byl navařen držák motoru, 
+        konzola napínací kladky a výztužné prvky.
       </p>
     </section>
 
     <section>
-      <h2>5. Vertikální osa Z a manipulační vidle</h2>
-      <img src="images/obr5.jpg" alt="Detail osy Z" class="img-uniform">
+      <h2>7. Napínací mechanismus osy A</h2>
       <p>
-        Osa Z využívá broušené vodicí tyče a kluzná pouzdra vystružená na rozměr <strong>12 H8</strong>. 
-        Pohyb zajišťuje trapézový šroub spojený s motorem přes pružnou spojku. Manipulační vidle 
-        jsou svařeny z L-profilů a opatřeny náběhy pro snadné podebrání krabiček.
+        Z L-profilu 20x20 mm byl vyroben napínák délky 180 mm. Na soustruhu byly zhotoveny dva ocelové čepy 
+        pro uložení ložisek kladek. Jeden čep byl navařen do napínáku a druhý do horní konzoly osy A. 
+        Napínák je k vodicímu profilu připevněn šroubovým spojem umožňujícím regulaci tahu.
       </p>
     </section>
 
     <section>
-      <h2>6. Statické vyvážení a elektroinstalace</h2>
-      <img src="images/obr6.jpg" alt="Rozváděč a závaží" class="img-uniform">
+      <h2>8. Kompletace kladek a motorů</h2>
       <p>
-        Na řemen osy A bylo instalováno ocelové <strong>protizávaží</strong>, které vyvažuje hmotnost 
-        mechanismu osy Z a snižuje zátěž motoru. Veškerá kabeláž je vedena v energetických 
-        řetězech do řídicího centra umístěného v OSB skříni pod rámem.
+        Vodicí kladky (zhotovené aditivní technologií) byly nalisovány na kuličková ložiska a zajištěny na čepech 
+        pomocí <strong>pojistných kroužků hřídelových (Segerovy kroužky)</strong>. Následovala montáž krokových motorů 
+        (typ 42-40 pro osu A a 42-34 pro osu B).
       </p>
     </section>
 
     <section>
-      <h2>Ukázka funkčního prototypu</h2>
+      <h2>9. Podpora kabelového nosiče</h2>
+      <img src="images/Obr_3.jpg" alt="Instalace energetického řetězu" class="img-uniform">
+      <p>
+        Pro bezpečné vedení kabeláže byla z ploché oceli 20x5 mm vyrobena podpora pro <strong>energetický řetěz</strong>. 
+        Skládá se ze dvou ohýbaných patek a vodicí lišty o délce 880 mm, která je k patkám přivařena.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Ložisková tělesa lineárního pojezdu</h2>
+      <p>
+        Z materiálu <strong>PETG</strong> byla vytištěna ložisková tělesa (vozíky). Systém využívá kombinaci pevných 
+        a excentrických čepů, které umožňují přesné vymezení vůle pojezdu na rámu. Do těles byla nalisována 
+        ložiska 6000 2RS a celá sestava byla nasunuta na vodicí profily rámu.
+      </p>
+    </section>
+
+    <section>
+      <h2>11. Montáž horizontálního pojezdu</h2>
+      <p>
+        Vodicí profil osy A byl pomocí šroubů DIN 603 pevně spojen s ložiskovými tělesy na hlavním rámu.
+      </p>
+    </section>
+
+    <section>
+      <h2>12. Konstrukce vertikální osy Z</h2>
+      <p>
+        Základem osy Z je svařenec profilu (220 mm) a ocelových čel. Jako lineární vedení slouží dvě 
+        <strong>broušené vodicí tyče</strong>. Tyče mají vysoustružené osazení a jsou zajištěny v čelech pomocí 
+        šroubů M5 a velkoplošných podložek.
+      </p>
+    </section>
+
+    <section>
+      <h2>13. Nabírací mechanismus (Vidle)</h2>
+      <p>
+        Nabírací prvek byl svařen z L-profilů a ploché oceli. Ramena byla zbroušena na rozměr 20x10 mm 
+        a opatřena náběhovými hranami (zaoblení a úkos) pro hladkou manipulaci se skladovými boxy.
+      </p>
+    </section>
+
+    <section>
+      <h2>14. Kompletace kluzného uložení osy Z</h2>
+      <p>
+        Z ocelové kulatiny byla vyrobena kluzná pouzdra, která byla přesně vyvrtána a vystružena na rozměr 
+        <strong>12 H8</strong>. Tato pouzdra zajišťují plynulý pohyb po vodicích tyčích. K pouzdrům byl přivařen 
+        nabírací mechanismus a matice pohybového šroubu.
+      </p>
+    </section>
+
+    <section>
+      <h2>15. Pohon vertikální osy</h2>
+      <img src="images/Obr_4.jpg" alt="Mechanismus vertikálního zdvihu" class="img-uniform">
+      <p>
+        Krokový motor 42-34 byl osazen pružnou spojkou a vícechodým pohybovým šroubem. Celá pohonná jednotka 
+        byla upevněna do sestavy vozíku pomocí šroubů s vnitřním šestihranem (imbus).
+      </p>
+    </section>
+
+    <section>
+      <h2>16. Finální sestavení mechanických podskupin</h2>
+      <p>
+        Kompletní modul osy Z byl integrován do ložiskového tělesa osy A.
+      </p>
+    </section>
+
+    <section>
+      <h2>17. Instalace řemenových převodů</h2>
+      <p>
+        Pro přenos síly v osách A a B byly použity <strong>ozubené řemeny</strong>. Konce řemenů jsou zafixovány 
+        v plechových úchytech zalisováním. Po instalaci bylo provedeno předepnutí řemenů pomocí napínacích mechanismů.
+      </p>
+    </section>
+
+    <section>
+      <h2>18. Statické vyvážení (Protizávaží)</h2>
+      <p>
+        Z důvodu snížení dynamického namáhání motoru osy A bylo instalováno protizávaží z ocelového 
+        hranolu 50x30 mm. Závaží je upevněno na řemen v protilehlé pozici k vozíku. Pro ochranu řemenu 
+        před otlačením šrouby byla v drážce závaží použita podložka z plechu.
+      </p>
+    </section>
+
+    <section>
+      <h2>19. Realizace elektrických rozvodů</h2>
+      <p>
+        Byla připravena kabeláž odpovídajících délek (4-žilové vodiče pro motory, stíněné 2-žilové vodiče 
+        pro koncové spínače). Kabely byly uloženy do článkových energetických řetězců (24 a 52 článků) 
+        a zakončeny příslušnými konektory.
+      </p>
+    </section>
+
+    <section>
+      <h2>20. Nosná konstrukce regálového systému</h2>
+      <p>
+        Z ploché oceli 30x5 mm a L-profilů byly vyrobeny konzoly regálu. Ty jsou k hlavnímu rámu připevněny 
+        šroubovými spoji. Pro stabilitu regálu byly doplněny T-profily, které slouží jako spodní opěra.
+      </p>
+    </section>
+
+    <section>
+      <h2>21. Sestavení a zapojení rozváděče</h2>
+      <img src="images/Obr_5.jpg" alt="Uspořádání v rozváděči" class="img-uniform">
+      <p>
+        Řídicí elektronika byla instalována do skříně z OSB desek umístěné v dolní části konstrukce. 
+        Po zapojení všech komponent byl do mikrokontroléru nahrán finální řídicí software.
+      </p>
+    </section>
+
+    <section>
+      <h2>22. Montáž modulárního regálu</h2>
+      <p>
+        Skladovací regál je konstruován z <strong>HDF desek (sololit)</strong> pomocí křížových zámků. 
+        Náběhové hrany buněk jsou zkoseny pro usnadnění zakládání. Zadní strana je opatřena dorazovými lištami, 
+        které definují koncovou polohu skladových boxů. Po mechanické kompletaci a nahrání souřadnic 
+        jednotlivých pozic je systém připraven k provozu.
+      </p>
+    </section>
+
+    <section>
+      <h2>Ukázka projektu</h2>
       <div class="video-container">
         <iframe 
           src="https://drive.google.com/file/d/1cj7kzJUauLkb4tSU7OuBVL3aNsmbH-b1/preview" 
@@ -150,20 +275,13 @@
           allowfullscreen>
         </iframe>
       </div>
-      <p>
-        Zde je zachycen finální pohybový test pořadače. Po zadání souřadnic nebo názvu materiálu 
-        systém automaticky najede na pozici, nabere box a vysune jej k uživateli.
-      </p>
     </section>
 
     <footer>
       <p><a href="index.html">← Zpět na hlavní stránku</a></p>
-      <p style="color: #777; font-size: 0.8em; margin-top: 20px;">
-        &copy; 2024 Projekt Sparex - David Lokaj, VUT FSI
-      </p>
+      <p style="text-align: center; color: #777;">&copy; 2024 Projekt Sparex - David Lokaj</p>
     </footer>
 
   </div>
-
 </body>
 </html>
