@@ -1,280 +1,263 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8">
-  <title>Final-projekt | Portfolio Davida Lokaje</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- propojení s centrálním CSS -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-  <div class="content">
-
-    <!-- Navigace -->
-    <div class="nav">
-      <a href="index.html">Domů</a>
-      <a href="tasks.html">Zpět na Úkoly</a>
-    </div>
-
-    <h1>Final-projekt</h1>
-
-  <section>
-  <p>
-    Mým cílem je vytvořit <strong>automatizovaný pořadač spojovacího materiálu</strong>.<br>
-    Projekt bude využívat moderní technologie, které umožní snadné třídění a uspořádání šroubků,
-    matic a dalších drobných komponent.
-  </p>
-
-  <img src="images/Model_1.jpg" alt="Návrh_1" class="img-uniform"> 
-    
-  <h2>Technologie</h2>
-  <ul>
-    <li><strong>3D tisk</strong> pro výrobu mechanických částí</li>
-    <li><strong>laserové řezání</strong> pro konstrukci modulů</li>
-    <li><strong>mikrokontrolér</strong> pro řízení automatizace</li>
-  </ul>
-
-  <h2>Očekávaný výsledek</h2>
-  <p>
-    Zařízení, které usnadní práci na dílně technikům tím, že ušetří čas při hledání a uklízení
-    spojovacího materiálu.
-  </p>
-
-
-  <p>
-  <!DOCTYPE html>
-<html lang="cs">
-<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Technologický postup - Sparex</title>
+    <title>Final-projekt | Portfolio Davida Lokaje</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
     <style>
+        /* Globální nastavení pro tmavý režim a bílý text */
         body {
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 900px;
+            background-color: #1a1a1a; /* Tmavé pozadí, aby vynikl bílý text */
+            color: #ffffff;            /* Všechen text bílý */
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
+
         h1, h2, h3 {
-            color: #2c3e50;
-            border-bottom: 1px solid #eee;
+            color: #ffffff;
+            border-bottom: 1px solid #444;
             padding-bottom: 10px;
         }
+
+        a {
+            color: #4db8ff; /* Světle modrá pro odkazy, aby byly vidět */
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .nav {
+            margin-bottom: 30px;
+        }
+
+        .nav a {
+            margin-right: 20px;
+            font-weight: bold;
+        }
+
+        /* Tabulky */
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 20px 0;
+            color: #ffffff;
         }
+
         table, th, td {
-            border: 1px solid #bdc3c7;
+            border: 1px solid #555;
         }
-        th, td {
-            padding: 12px;
-            text-align: left;
-        }
+
         th {
-            background-color: #ecf0f1;
+            background-color: #333;
+            padding: 12px;
         }
+
+        td {
+            padding: 12px;
+        }
+
+        /* Technologické kroky */
         .step {
             margin-bottom: 30px;
-            padding: 15px;
-            background: #fdfdfd;
+            padding: 20px;
+            background: #252525;
             border-left: 5px solid #3498db;
         }
+
+        .note {
+            background-color: #4d4422; /* Tmavší žlutá/hnědá pro poznámku */
+            padding: 15px;
+            border-radius: 4px;
+            font-style: italic;
+            margin: 10px 0;
+        }
+
+        /* Obrázky a Video */
         figure {
             margin: 20px 0;
             text-align: center;
-            background: #f9f9f9;
-            padding: 10px;
-            border: 1px dashed #ccc;
+            background: #252525;
+            padding: 15px;
+            border: 1px dashed #555;
         }
+
         figcaption {
             font-style: italic;
             font-size: 0.9em;
-            margin-top: 8px;
-            color: #555;
+            margin-top: 10px;
+            color: #ccc;
         }
-        .note {
-            background-color: #fff3cd;
-            padding: 10px;
-            border-radius: 4px;
-            font-style: italic;
+
+        .img-uniform {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .video-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        iframe {
+            border: none;
+            max-width: 100%;
+        }
+
+        ul {
+            list-style-type: square;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            border-top: 1px solid #444;
+            color: #888;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Technologický postup výroby automatizovaného systému „Sparex“</h1>
-    </header>
+    <div class="content">
+        <nav class="nav">
+            <a href="index.html">Domů</a>
+            <a href="tasks.html">Zpět na Úkoly</a>
+        </nav>
 
-    <section>
-        <h2>1. Fáze: Vývoj a verifikace řídicího algoritmu</h2>
-        <p>V úvodní fázi byl sestaven funkční model pro testování řídicího programu v prostředí Arduino IDE. Cílem bylo odladění logiky pohybu, kalibrace kroků motorů a eliminace chyb v komunikaci s drivery ještě před samotnou stavbou mechanické konstrukce.</p>
-        
-        <figure>
-            <img src="cesta-k-obrazku/obr1.jpg" alt="Schéma zapojení" style="max-width:100%;">
-            <figcaption>Obr. 1: Schéma zapojení testovacího kitu s Arduinem a drivery</figcaption>
-        </figure>
-    </section>
+        <header>
+            <h1>Final-projekt: Automatizovaný pořadač Sparex</h1>
+        </header>
 
-    <section>
-        <h2>2. Konstrukční návrh (CAD)</h2>
-        <p>Po úspěšném ověření elektroniky byla vytvořena kompletní sestava v programu <strong>SolidWorks</strong>. Na základě 3D modelu byla vygenerovala výkresová dokumentace, podle které probíhala výroba jednotlivých komponent.</p>
-    </section>
+        <section>
+            <p>
+                Mým cílem je vytvořit <strong>automatizovaný pořadač spojovacího materiálu</strong>. 
+                Projekt využívá moderní technologie, které umožní snadné třídění a uspořádání šroubků, 
+                matic a dalších drobných komponent.
+            </p>
 
-    <section>
-        <h2>3. Výroba nosného rámu</h2>
-        <div class="step">
-            <p>Základem zařízení je tuhý rám z <strong>uzavřených ocelových profilů</strong> (čtvercového průřezu) 30x30 mm. Profily byly děleny na délky 1100 mm a 900 mm s koncovými pokosy pod úhlem 45°.</p>
-            <p>Dále bylo z ploché oceli 20x5 mm vyrobeno 8 kusů rohových výztuh. Ty byly následně svařeny do pravého úhlu a opatřeny otvory o průměru 5 mm. Rám byl ustaven do přípravku a fixován pomocí <strong>stehových svarů</strong>. Po kontrole pravoúhlosti byly svary dokončeny a zabroušeny. Do výztuh byly vyřezány závity <strong>M6</strong> a odpovídající otvory v rámu byly zvětšeny na průměr 6,5 mm pro zajištění montážní vůle.</p>
-            <p class="note">Poznámka: Pro zachování souososti byly jednotlivé uzly označeny důlčíkem (1–4).</p>
-        </div>
-        
-        <figure>
-            <img src="cesta-k-obrazku/obr2.jpg" alt="Detail rohového spoje" style="max-width:100%;">
-            <figcaption>Obr. 2: Detail rohového spoje rámu s úhelníkem a kótami pro vrtání</figcaption>
-        </figure>
-    </section>
+            <figure>
+                <img src="images/Model_1.jpg" alt="3D návrh pořadače" class="img-uniform">
+                <figcaption>Obr. A: Původní vizualizace konceptu</figcaption>
+            </figure>
 
-    <section>
-        <h2>4. Konzoly pohonů a snímačů polohy</h2>
-        <p>Z ocelového plechu byly vyrobeny držáky krokových motorů, napínacích kladek a <strong>koncových spínačů</strong>. Po ohýbání byly tyto díly ustaveny na horní rámový profil. Držák motoru je k rámu přivařen, zatímco držák napínacího mechanismu je demontovatelný (připevněn šrouby M6 do vyřezaných závitů).</p>
-    </section>
+            <h2>Použité technologie</h2>
+            <ul>
+                <li><strong>3D tisk</strong> pro výrobu mechanických částí a domků ložisek</li>
+                <li><strong>Laserové řezání</strong> pro konstrukci modulů a regálu</li>
+                <li><strong>Mikrokontrolér (Arduino)</strong> pro kompletní řízení automatizace</li>
+                <li><strong>Pohonné systémy:</strong> Krokové motory NEMA 17 s drivery TB6600</li>
+            </ul>
 
-    <section>
-        <h2>5. Příprava svislých vodicích profilů</h2>
-        <p>Do svislých profilů rámu byly vyvrtány a vyřezány závity pro upevnění horních komponent a spodních držáků regálového systému.</p>
-    </section>
+            <h2>Očekávaný výsledek</h2>
+            <p>
+                Zařízení, které usnadní práci v dílně tím, že ušetří čas při hledání a uklízení 
+                spojovacího materiálu. Systém Sparex po zadání požadavku automaticky vyhledá a vydá příslušný box.
+            </p>
+        </section>
 
-    <section>
-        <h2>6. Horizontální vedení osy A</h2>
-        <p>Hlavní pojezd osy A tvoří uzavřený obdélníkový profil 40x20 mm o délce 1150 mm. Otvory pro <strong>šrouby s plochou hlavou a čtyřhranem (DIN 603)</strong> byly z lícní strany zahloubeny na průměr 20 mm. Pro zafixování čtyřhranu šroubu byl otvor upraven jehlovým pilníkem na čtvercový průřez. Na profil byl navařen držák motoru, konzola napínací kladky a výztužné prvky.</p>
-        
-        <figure>
-            <img src="cesta-k-obrazku/obr3.jpg" alt="Sestava osy A" style="max-width:100%;">
-            <figcaption>Obr. 3: Sestava vodítka osy A s detaily držáků a napínáku</figcaption>
-        </figure>
-    </section>
+        <hr style="border: 0; border-top: 1px solid #444; margin: 40px 0;">
 
-    <section>
-        <h2>7. Napínací mechanismus osy A</h2>
-        <p>Z L-profilu 20x20 mm byl vyroben napínák délky 180 mm. Na soustruhu byly zhotoveny dva ocelové čepy pro uložení ložisek kladek. Jeden čep byl navařen do napínáku a druhý do horní konzoly osy A. Napínák je k vodicímu profilu připevněn šroubovým spojem umožňujícím regulaci tahu.</p>
-    </section>
+        <article>
+            <h2>Technologický postup výroby</h2>
 
-    <section>
-        <h2>8. Kompletace kladek a motorů</h2>
-        <p>Vodicí kladky (zhotovené aditivní technologií) byly nalisovány na kuličková ložiska a zajištěny na čepech pomocí <strong>pojistných kroužků hřídelových (Segerovy kroužky)</strong>. Následovala montáž krokových motorů (typ 42-40 pro osu A a 42-34 pro osu B).</p>
-    </section>
+            <section class="step">
+                <h3>1. Fáze: Vývoj a verifikace řídicího algoritmu</h3>
+                <p>V úvodní fázi byl sestaven funkční model pro testování řídicího programu v prostředí Arduino IDE. Cílem bylo odladění logiky pohybu, kalibrace kroků motorů a eliminace chyb v komunikaci s drivery ještě před samotnou stavbou mechanické konstrukce.</p>
+                <figure>
+                    <img src="cesta-k-obrazku/obr1.jpg" alt="Schéma zapojení" class="img-uniform">
+                    <figcaption>Obr. 1: Schéma zapojení testovacího kitu s Arduinem a drivery</figcaption>
+                </figure>
+            </section>
 
-    <section>
-        <h2>9. Podpora kabelového nosiče</h2>
-        <p>Pro bezpečné vedení kabeláže byla z ploché oceli 20x5 mm vyrobena podpora pro <strong>energetický řetěz</strong>. Skládá se ze dvou ohýbaných patek a vodicí lišty o délce 880 mm, která je k patkám přivařena.</p>
-    </section>
+            <section class="step">
+                <h3>2. Konstrukční návrh (CAD)</h3>
+                <p>Po úspěšném ověření elektroniky byla vytvořena kompletní sestava v programu <strong>SolidWorks</strong>. Na základě 3D modelu byla vygenerována výkresová dokumentace, podle které probíhala výroba jednotlivých komponent.</p>
+            </section>
 
-    <section>
-        <h2>10. Ložisková tělesa lineárního pojezdu</h2>
-        <p>Z materiálu PETG byla vytištěna ložisková tělesa (vozíky). Systém využívá kombinaci pevných a <strong>excentrických čepů</strong>, které umožňují přesné vymezení vůle pojezdu na rámu. Do těles byla nalisována ložiska 6000 2RS a celá sestava byla nasunuta na vodicí profily rámu.</p>
-        
-        <figure>
-            <img src="cesta-k-obrazku/obr4.jpg" alt="3D model domku" style="max-width:100%;">
-            <figcaption>Obr. 4: 3D model domku lineárního vedení s vyznačením excentrických čepů</figcaption>
-        </figure>
-    </section>
+            <section class="step">
+                <h3>3. Výroba nosného rámu</h3>
+                <p>Základem zařízení je tuhý rám z <strong>uzavřených ocelových profilů</strong> 30x30 mm. Profily byly děleny na délky 1100 mm a 900 mm s koncovými pokosy pod úhlem 45°.</p>
+                <p>Z ploché oceli 20x5 mm bylo vyrobeno 8 kusů rohových výztuh, které byly svařeny do pravého úhlu. Rám byl fixován pomocí <strong>stehových svarů</strong>, po kontrole pravoúhlosti dokončen a zabroušen. Do výztuh byly vyřezány závity <strong>M6</strong>.</p>
+                <p class="note">Poznámka: Pro zachování souososti byly jednotlivé uzly označeny důlčíkem (1–4).</p>
+                <figure>
+                    <img src="cesta-k-obrazku/obr2.jpg" alt="Detail rohového spoje" class="img-uniform">
+                    <figcaption>Obr. 2: Detail rohového spoje rámu s úhelníkem</figcaption>
+                </figure>
+            </section>
 
-    <section>
-        <h2>11. Montáž horizontálního pojezdu</h2>
-        <p>Vodicí profil osy A byl pomocí šroubů DIN 603 pevně spojen s ložiskovými tělesy na hlavním rámu.</p>
-    </section>
+            <section class="step">
+                <h3>4. Konzoly pohonů a snímačů polohy</h3>
+                <p>Z ocelového plechu byly vyrobeny držáky krokových motorů, napínacích kladek a <strong>koncových spínačů</strong>. Držák motoru je k rámu přivařen, zatímco držák napínacího mechanismu je demontovatelný (připevněn šrouby M6).</p>
+            </section>
 
-    <section>
-        <h2>12. Konstrukce vertikální osy Z</h2>
-        <p>Základem osy Z je svařenec profilu (220 mm) a ocelových čel. Jako lineární vedení slouží dvě <strong>broušené vodicí tyče</strong> o průměru 12 mm. Tyče mají vysoustružené osazení na 10 mm a jsou zajištěny v čelech pomocí šroubů M5 a velkoplošných podložek.</p>
-    </section>
+            <section class="step">
+                <h3>6. Horizontální vedení osy A</h3>
+                <p>Hlavní pojezd osy A tvoří profil 40x20 mm o délce 1150 mm. Otvory pro <strong>šrouby s plochou hlavou a čtyřhranem (DIN 603)</strong> byly zahloubeny tak, aby hlavy šroubů nepřekážely pojezdu. Na horní část byl navařen držák motoru a konzola napínací kladky.</p>
+                <figure>
+                    <img src="cesta-k-obrazku/obr3.jpg" alt="Sestava osy A" class="img-uniform">
+                    <figcaption>Obr. 3: Sestava vodítka osy A s detaily držáků</figcaption>
+                </figure>
+            </section>
 
-    <section>
-        <h2>13. Nabírací mechanismus (Vidle)</h2>
-        <p>Nabírací prvek byl svařen z L-profilů a ploché oceli. Ramena byla zbroušena na rozměr 20x10 mm a opatřena náběhovými hranami (zaoblení a úkos) pro hladkou manipulaci se skladovými boxy.</p>
-    </section>
+            <section class="step">
+                <h3>10. Ložisková tělesa lineárního pojezdu</h3>
+                <p>Z materiálu PETG byla vytištěna ložisková tělesa. Systém využívá <strong>excentrické čepy</strong>, které umožňují přesné vymezení vůle pojezdu na rámu. Do těles byla nalisována ložiska 6000 2RS.</p>
+                <figure>
+                    <img src="cesta-k-obrazku/obr4.jpg" alt="3D model domku" class="img-uniform">
+                    <figcaption>Obr. 4: 3D model domku lineárního vedení</figcaption>
+                </figure>
+            </section>
 
-    <section>
-        <h2>14. Kompletace kluzného uložení osy Z</h2>
-        <p>Z ocelové kulatiny byla vyrobena kluzná pouzdra, která byla přesně vyvrtána a <strong>vystružena na rozměr 12 H8</strong>. Tato pouzdra zajišťují plynulý pohyb po vodicích tyčích. K pouzdrům byl přivařen nabírací mechanismus a <strong>matice pohybového šroubu</strong>.</p>
-    </section>
+            <section class="step">
+                <h3>14. Kompletace kluzného uložení osy Z</h3>
+                <p>Z ocelové kulatiny byla vyrobena kluzná pouzdra, která byla vystružena na rozměr <strong>12 H8</strong>. Tato pouzdra zajišťují plynulý pohyb po vodicích tyčích. K pouzdrům byl přivařen nabírací mechanismus a matice pohybového šroubu.</p>
+            </section>
 
-    <section>
-        <h2>15. Pohon vertikální osy</h2>
-        <p>Krokový motor 42-34 byl osazen pružnou spojkou a <strong>vícechodým pohybovým šroubem</strong>. Celá pohonná jednotka byla upevněna do sestavy vozíku pomocí šroubů s vnitřním šestihranem (imbus).</p>
-        
-        <figure>
-            <img src="cesta-k-obrazku/obr5.jpg" alt="Detail osy Z" style="max-width:100%;">
-            <figcaption>Obr. 5: Mechanismus vertikálního zdvihu s pohybovým šroubem</figcaption>
-        </figure>
-    </section>
+            <section class="step">
+                <h3>18. Statické vyvážení (Protizávaží)</h3>
+                <p>Z důvodu snížení dynamického namáhání motoru osy A bylo instalováno protizávaží z ocelového hranolu 50x30 mm. Závaží je upevněno na řemen v protilehlé pozici k vozíku, čímž vyvažuje hmotnost mechanismu osy Z.</p>
+            </section>
 
-    <section>
-        <h2>16. Finální sestavení mechanických podskupin</h2>
-        <p>Kompletní modul osy Z byl integrován do ložiskového tělesa osy A.</p>
-    </section>
+            <section class="step">
+                <h3>21. Sestavení a zapojení rozváděče</h3>
+                <p>Řídicí elektronika byla instalována do skříně z OSB desek umístěné v dolní části konstrukce. Veškerá kabeláž je vedena v článkových energetických řetězech pro ochranu před mechanickým poškozením.</p>
+                <figure>
+                    <img src="cesta-k-obrazku/obr6.jpg" alt="Vnitřek rozváděče" class="img-uniform">
+                    <figcaption>Obr. 6: Uspořádání komponent v elektrickém rozváděči</figcaption>
+                </figure>
+            </section>
 
-    <section>
-        <h2>17. Instalace řemenových převodů</h2>
-        <p>Pro přenos síly v osách A a B byly použity ozubené řemeny. Konce řemenů jsou zafixovány v plechových úchytech zalisováním. Po instalaci bylo provedeno předepnutí řemenů pomocí napínacích mechanismů.</p>
-    </section>
+            <section class="step">
+                <h3>22. Montáž modulárního regálu</h3>
+                <p>Skladovací regál je konstruován z HDF desek pomocí křížových zámků. Zadní strana je opatřena dorazovými lištami, které definují koncovou polohu skladových boxů. Po kalibraci souřadnic je systém připraven k provozu.</p>
+            </section>
+        </article>
 
-    <section>
-        <h2>18. Statické vyvážení (Protizávaží)</h2>
-        <p>Z důvodu snížení dynamického namáhání motoru osy A bylo instalováno protizávaží z ocelového hranolu 50x30 mm. Závaží je upevněno na řemen v protilehlé pozici k vozíku. Pro ochranu řemenu před otlačením šrouby byla v drážce závaží použita podložka z plechu.</p>
-    </section>
+        <section>
+            <h2>Video ukázka projektu</h2>
+            <div class="video-container">
+                <iframe 
+                    src="https://drive.google.com/file/d/1cj7kzJUauLkb4tSU7OuBVL3aNsmbH-b1/preview" 
+                    width="800" 
+                    height="450" 
+                    allow="autoplay" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
 
-    <section>
-        <h2>19. Realizace elektrických rozvodů</h2>
-        <p>Byla připravena kabeláž odpovídajících délek (4-žilové vodiče pro motory, stíněné 2-žilové vodiče pro <strong>koncové spínače</strong>). Kabely byly uloženy do článkových energetických řetězců a zakončeny příslušnými konektory.</p>
-    </section>
+        <footer>
+            <p><a href="index.html">← Zpět na hlavní stránku</a></p>
+            <p>&copy; 2024 Projekt Sparex - David Lokaj, VUT FSI</p>
+        </footer>
+    </div>
 
-    <section>
-        <h2>20. Nosná konstrukce regálového systému</h2>
-        <p>Z ploché oceli 30x5 mm a L-profilů byly vyrobeny konzoly regálu. Ty jsou k hlavnímu rámu připevněny šroubovými spoji. Pro stabilitu regálu byly doplněny T-profily, které slouží jako spodní opěra.</p>
-    </section>
-
-    <section>
-        <h2>21. Sestavení a zapojení rozváděče</h2>
-        <p>Řídicí elektronika byla instalována do skříně z OSB desek umístěné v dolní části konstrukce. Po zapojení všech komponent byl do mikrokontroléru nahrán finální řídicí software.</p>
-        
-        <figure>
-            <img src="cesta-k-obrazku/obr6.jpg" alt="Vnitřek rozváděče" style="max-width:100%;">
-            <figcaption>Obr. 6: Uspořádání komponent v elektrickém rozváděči</figcaption>
-        </figure>
-    </section>
-
-    <section>
-        <h2>22. Montáž modulárního regálu</h2>
-        <p>Skladovací regál je konstruován z HDF desek (sololit) pomocí křížových zámků (zářezy v polovině výšky desky). Náběhové hrany buněk jsou zkoseny pro usnadnění zakládání. Zadní strana je opatřena dorazovými lištami, které definují koncovou polohu <strong>skladových boxů</strong>. Po mechanické kompletaci a nahrání souřadnic jednotlivých pozic je systém připraven k provozu.</p>
-    </section>
-
-    <footer>
-        <p style="text-align: center; margin-top: 50px; color: #777;">&copy; 2024 Projekt Sparex - VUT FSI</p>
-    </footer>
-
-</body>
-</html>
-  </p>
-<section>
-  <h2>Ukázka projektu</h2>
-  <div class="video-container">
-    <iframe 
-      src="https://drive.google.com/file/d/1cj7kzJUauLkb4tSU7OuBVL3aNsmbH-b1/preview" 
-      width="640" 
-      height="480" 
-      allow="autoplay" 
-      allowfullscreen>
-    </iframe>
-  </div>
-</section>
-
-  <p><a href="index.html">← Zpět na hlavní stránku</a></p>
 </body>
 </html>
